@@ -1,5 +1,6 @@
 package com.xxx.jdk8.stream;
 
+import java.util.IntSummaryStatistics;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -26,6 +27,18 @@ public class StreamTest6 {
                 .limit(2)
                 .sum();
         System.out.println(sum);
+        System.out.println("--------------");
+        //min() max()--返回 OptionalInt
+        IntSummaryStatistics summaryStatistics = Stream.iterate(1, i -> i + 2)
+                .limit(6)
+                .filter(i -> i > 4)
+                .mapToInt(i -> i * 2)
+                .skip(2)
+                .limit(2)
+                .summaryStatistics();
+        System.out.println(summaryStatistics.getMax());
+        System.out.println(summaryStatistics.getMin());
+        System.out.println("---------------");
 
     }
 }
