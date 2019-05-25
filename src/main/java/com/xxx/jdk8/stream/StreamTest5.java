@@ -2,6 +2,7 @@ package com.xxx.jdk8.stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * @author zhwanwan
@@ -16,6 +17,12 @@ public class StreamTest5 {
         list2.stream().map(i -> i * i).forEach(System.out::println);
         System.out.println("------------------");
         //flat map
+        Stream<List<Integer>> stream = Stream.of(
+                Arrays.asList(0, 1),
+                Arrays.asList(2, 3),
+                Arrays.asList(4, 5, 6)
+        );
+        stream.flatMap(List::stream).map(i -> i * i).forEach(System.out::println);
 
     }
 
