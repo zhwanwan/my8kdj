@@ -2,7 +2,6 @@ package com.xxx.jdk8.stream2;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author zhwanwan
@@ -50,7 +49,7 @@ public class StreamTest3 {
             }).forEach(System.out::println);
         }*/
 
-        NullPointerException npe = new NullPointerException("NPE");
+        /*NullPointerException npe = new NullPointerException("NPE");
         try (Stream<String> stream = list.stream()) {
             stream.onClose(() -> {
                 System.out.println("aaa");
@@ -59,6 +58,8 @@ public class StreamTest3 {
                 System.out.println("bbb");
                 throw npe;
             }).forEach(System.out::println);
-        }
+        }*/
+
+        list.stream().map(String::toUpperCase).forEach(System.out::println);
     }
 }
