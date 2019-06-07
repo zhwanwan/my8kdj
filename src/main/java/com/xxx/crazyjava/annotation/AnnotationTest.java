@@ -1,4 +1,4 @@
-package com.xxx.crazyjavja.annotation;
+package com.xxx.crazyjava.annotation;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

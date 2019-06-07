@@ -1,4 +1,4 @@
-package com.xxx.crazyjavja.annotation;
+package com.xxx.crazyjava.annotation;
 
 import java.awt.event.ActionListener;
 import java.lang.annotation.ElementType;
